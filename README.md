@@ -4,7 +4,7 @@ The Sun/Moon moves during an eclipse. If you do not have a tracker but have hund
 
 ### The Challenge
 
-Object recognition is not enough. Finding the smallest contour works for the full Sun/Moon, but it does not help to align the partial Sun/Moon. All photos should be aligned at the center of the full/partial Sun/Moon. A solution is to embed the knowledge into the program that the object it tries to recognize is part of a circle. The program should try to match the full/partial edge of a circle, and derive the center and radius of the circle.
+Object recognition is not enough. Finding the smallest contour works for the full Sun/Moon, but it does not help to align the partial Sun/Moon. All photos should be aligned at the center of the full/partial Sun/Moon. A solution is to embed the knowledge into the program that the object it tries to recognize is part of a circle. The program should try to match the full/partial circle, and derive the center and radius of the circle.
 
 Assuming the contrast of the photo is good and the program can recognize circles based on the edge, there is still a second challenge: the program probably finds two circles in the instance of a solar eclipse -- one for the Sun (yellow region) and one for the Moon (blackout region). We need to tell the program to only return the one we need.
 
