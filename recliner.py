@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
 
+""" Automatic Eclipse Photo Alignment for Timelapse
+"""
+
+__author__ = "Xiaokui Shu"
+__copyright__ = "Copyright 2019, Xiaokui Shu"
+__license__ = "Apache"
+__version__ = "1.0.0"
+__maintainer__ = "Xiaokui Shu"
+__email__ = "xiaokui.shu@ibm.com"
+__status__ = "Prototype"
+
 import argparse
 import os
 import magic
