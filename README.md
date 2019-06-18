@@ -2,7 +2,7 @@
 
 The Sun/Moon moves during an eclipse. If you do not have a tracker but have hundreds of photos with the Sun/Moon at all places, you may want a tool to align the Sun/Moon (and partial Sun/Moon) for creating a timelapse. This is the tool to do it.
 
-### The Challenge
+### The Challenges
 
 Object recognition is not enough. Finding the smallest contour works for the full Sun/Moon, but it does not help to align the partial Sun/Moon. All photos should be aligned at the center of the full/partial Sun/Moon. A solution is to embed the knowledge into the program that the object it tries to recognize is part of a circle. The program should try to match the full/partial circle, and derive the center and radius of the circle.
 
