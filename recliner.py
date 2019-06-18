@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-""" Automatic Eclipse Photo Alignment for Timelapse
+""" Eclipse Photo Alignment for Timelapse
 """
 
 __author__ = "Xiaokui Shu"
