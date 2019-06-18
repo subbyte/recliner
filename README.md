@@ -28,7 +28,7 @@ Assuming the contrast of the photo is good and the program can recognize circles
 
 4. rerun recliner with tuned parameters.
 
-5. when you are satisfied with the recognition results, run `./recliner --outputwidth=1920 --outputheight=1080 SDIR DDIR` to output to fullHD photos. If the Sun/Moon is too large, run with `--outputresize=0.5`.
+5. when you are satisfied, run `./recliner --outputwidth=1920 --outputheight=1080 SDIR DDIR` to output to fullHD photos. If the Sun/Moon is too large, run with `--outputresize=0.5`.
 
 [eg1]: figures/01.png
 [eg2]: figures/02.png
