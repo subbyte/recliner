@@ -12,7 +12,7 @@ Assuming the contrast of the photo is good and the program can recognize circles
 ![Circle Recognition 2][eg2]
 ![Circle Recognition 3][eg3]
 
-### The Magic Employed by recliner
+### What is The Magic in recliner
 
 1. cv::HoughCircles() in openCV
 
