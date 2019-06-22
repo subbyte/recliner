@@ -25,7 +25,7 @@ Assuming the contrast of the photo is good and the program can recognize circles
 
 2. estimate the radius of the Sun/Moon in pixel.
 
-3. run `./recliner -d --minradius MINR --maxradius MAXR SDIR DDIR` It will output the circle recognition results in `DDIR` with green circle and red center dot. recliner will output suggestions if any to fine-tune the parameters.
+3. run `./recliner -a --minradius MINR --maxradius MAXR SDIR DDIR` It will output the circle recognition results in `DDIR` with green circle and red center dot. recliner will output suggestions if any to fine-tune the parameters.
 
 4. rerun recliner with tuned parameters.
 
