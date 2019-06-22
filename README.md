@@ -31,7 +31,7 @@ Assuming the contrast of the photo is good and the program can recognize circles
 
 5. when you are satisfied, run `./recliner --outputwidth=1920 --outputheight=1080 SDIR DDIR` to output to fullHD photos. If the Sun/Moon is too large, run with `--outputresize=0.5`.
 
-[dt1]: detected/01.png
-[dt2]: detected/02.png
-[dt3]: detected/03.png
-[dt4]: detected/04.png
+[dt1]: detected/01.jpg
+[dt2]: detected/02.jpg
+[dt3]: detected/03.jpg
+[dt4]: detected/04.jpg
