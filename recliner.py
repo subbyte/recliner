@@ -8,7 +8,7 @@ __copyright__ = "Copyright 2019, Xiaokui Shu"
 __license__ = "Apache"
 __version__ = "1.2.0"
 __maintainer__ = "Xiaokui Shu"
-__email__ = "xiaokui.shu@ibm.com"
+__email__ = "subbyte@gmail.com"
 __status__ = "Prototype"
 
 import argparse
@@ -98,7 +98,7 @@ def gen_detect_sun (cirD, minR, maxR, houghparam1, houghparam2, is_analyze, ddir
             print("[Warning] no Sun detected in photo %s\nConsider rerun with different parameters." % (p))
     return detect_sun
 
-def gen_align_sun (fp_detect_sun, ddir, ocw, och, r):
+def gen_align_sun (fp_detect_sun, ddir, ocw, och):
     def align_sun (p):
         pb = os.path.basename(p)
         sun = fp_detect_sun(p)
@@ -112,10 +112,8 @@ def gen_align_sun (fp_detect_sun, ddir, ocw, och, r):
             h = och if och>0 else mle*2
             img = cv2.imread(p)
             suncrop = img[y-ch:y+ch, x-ch:x+ch]
-            ch_r = int(ch*r)
-            sunresize = cv2.resize(suncrop, (ch_r*2, ch_r*2))
             imgo = numpy.zeros((h,w,3), numpy.uint8)
-            imgo[h//2-ch_r:h//2+ch_r, w//2-ch_r:w//2+ch_r] = sunresize[:,:]
+            imgo[h//2-ch:h//2+ch, w//2-ch:w//2+ch] = suncrop[:,:]
             po = os.path.join(ddir, pb)
             cv2.imwrite(po, imgo)
     return align_sun
@@ -133,7 +131,6 @@ def main ():
     parser.add_argument("--houghparam2", metavar="HPM2", help="Int: param2 in HoughCircles()", default=default_hough_param2, type=int)
     parser.add_argument("--outputwidth", metavar="OCW", help="Int: output canvas width", default=default_output_canvas_width, type=int)
     parser.add_argument("--outputheight", metavar="OCH", help="Int: output canvas height", default=default_output_canvas_height, type=int)
-    parser.add_argument("--outputresize", metavar="R", help="Float: output resize ratio in (0, 1]", default=default_output_resize_ratio, type=float)
 
     args = parser.parse_args()
     try:
@@ -166,7 +163,7 @@ def main ():
                 else:
                     print("[Error] no Sun found in any photos")
             else:
-                func_align_sun = gen_align_sun(func_rcg_sun, args.ddir, args.outputwidth, args.outputheight, args.outputresize)
+                func_align_sun = gen_align_sun(func_rcg_sun, args.ddir, args.outputwidth, args.outputheight)
                 with multiprocessing.pool.ThreadPool() as workers:
                     workers.map(func_align_sun, photos)
         else:
