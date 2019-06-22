@@ -27,7 +27,7 @@ The Sun/Moon moves during an eclipse. If you do not have a tracker but have hund
 
 4. rerun recliner with tuned parameters iteratively.
 
-5. when you are satisfied, run `./recliner --outputwidth=1920 --outputheight=1080 SDIR DDIR` to output to fullHD photos. If the Sun/Moon is too large.
+5. when you are satisfied, run `./recliner --outputwidth=1920 --outputheight=1080 SDIR DDIR` to output to Full HD photos.
 
 [o1]: analyzed/01.jpg
 [o2]: analyzed/02.jpg
