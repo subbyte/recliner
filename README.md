@@ -8,9 +8,10 @@ Object recognition is not enough. Finding the smallest contour works for the ful
 
 Assuming the contrast of the photo is good and the program can recognize circles based on the edge, there is still a second challenge: the program probably finds two circles in the instance of a solar eclipse -- one for the Sun (yellow region) and one for the Moon (blackout region). We need to tell the program to only return the one we need.
 
-![Circle Recognition 1][eg1]
-![Circle Recognition 2][eg2]
-![Circle Recognition 3][eg3]
+![Circle Recognition 1][dt1]
+![Circle Recognition 2][dt2]
+![Circle Recognition 3][dt3]
+![Circle Recognition 3][dt4]
 
 ### What is The Magic in recliner
 
@@ -30,6 +31,7 @@ Assuming the contrast of the photo is good and the program can recognize circles
 
 5. when you are satisfied, run `./recliner --outputwidth=1920 --outputheight=1080 SDIR DDIR` to output to fullHD photos. If the Sun/Moon is too large, run with `--outputresize=0.5`.
 
-[eg1]: figures/01.png
-[eg2]: figures/02.png
-[eg3]: figures/03.png
+[dt1]: detected/01.png
+[dt2]: detected/02.png
+[dt3]: detected/03.png
+[dt4]: detected/04.png
