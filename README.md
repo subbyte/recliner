@@ -1,4 +1,4 @@
-# Eclipse Photo Alignment for Timelapse
+# Robust Eclipse Photo Alignment for Timelapse
 
 The Sun/Moon moves during an eclipse. If you do not have a tracker but have hundreds of photos with the Sun/Moon at all places, you may want a tool to align the Sun/Moon (and partial Sun/Moon) for creating a timelapse. This is the tool to do it. And it parallelizes photo processing on multi-core CPUs (one image per core).
 
